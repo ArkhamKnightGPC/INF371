@@ -82,10 +82,6 @@ public class Percolation{
         if((up && n<size) || (!up && n+size>=length))return true;
 
         int[] neighbors = generateCellNeighbors(n);
-        neighbors[0] = (n/size == (n-1)/size) ? n - 1 : -1; //gauche
-        neighbors[1] = (n/size == (n+1)/size) ? n + 1 : -1; //droite
-        neighbors[2] = n - size; //dessus
-        neighbors[3] = n + size; //dessous
         boolean resp = false;
         for(int neighbor : neighbors){
             if(!validCase(neighbor))continue;
