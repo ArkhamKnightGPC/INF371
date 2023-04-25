@@ -71,7 +71,7 @@ public class Percolation{
         return neighbors;
     }
 
-    /* boolean isNaivePercolation(int n)
+    /* boolean detectPath(boolean[] seen, int n, boolean up)
      * si up==true => cherche chemin entre case n et ligne 0
      * si up==false => cherche chemin entre case n et ligne size-1
      */
