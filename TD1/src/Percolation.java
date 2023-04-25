@@ -119,7 +119,7 @@ public class Percolation{
      * indique chemin entre la ligne 0 et la ligne size-1 passant par case n
      */
     public static boolean isPercolation(int n){
-        return isFastPercolation(n);
+        return isLogPercolation();
     }
 
     /* double percolation()
