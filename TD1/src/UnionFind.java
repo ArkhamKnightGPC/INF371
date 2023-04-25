@@ -19,8 +19,7 @@ public class UnionFind {
      * retourne le representant canonique associe a x
      */
     public static int naiveFind(int x){
-        if(x == equiv[x])return equiv[x];
-        return naiveFind(equiv[x]);
+        return equiv[x];
     }
 
     /* int naiveFind(int x)
@@ -29,15 +28,19 @@ public class UnionFind {
     public static int naiveUnion(int x, int y){
         x = naiveFind(x);
         y = naiveFind(y);
-        equiv[x] = y;
-        return y;
+        for(int i=0; i<equiv.length; i++){
+            if(equiv[i] == y){
+                equiv[i] = x;
+            }
+        }
+        return x;
     }
 
     /* int fastFind(int x)
      */
     public static int fastFind(int x){
         if(x == equiv[x])return equiv[x];
-        return equiv[x] = fastFind(equiv[x]);
+        return fastFind(equiv[x]);
     }
 
     /* int fastUnion(int x)
