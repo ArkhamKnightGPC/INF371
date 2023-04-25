@@ -119,7 +119,7 @@ public class Percolation{
      * indique chemin entre la ligne 0 et la ligne size-1 passant par case n
      */
     public static boolean isPercolation(int n){
-        return isLogPercolation();
+        return isFastPercolation(n);
     }
 
     /* double percolation()
@@ -196,8 +196,9 @@ public class Percolation{
     public static void main(String[] args) throws Exception {
         double startTime = System.currentTimeMillis();
         int n = Integer.parseInt(args[0]);
+        double estimation = monteCarlo(n);
         double endTime = System.currentTimeMillis();
-        System.out.println("Estimated rate of black cells: " + monteCarlo(n));
+        System.out.println("Estimated rate of black cells: " + estimation);
         System.out.println("Run time: " + (endTime - startTime));
     }
 
