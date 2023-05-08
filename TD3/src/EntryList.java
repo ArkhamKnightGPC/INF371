@@ -2,16 +2,16 @@ public class EntryList {
     Entry head;
     EntryList next;
 
-    static void addLast(Entry entry, EntryList l){
+    static EntryList addLast(Entry entry, EntryList l){
         EntryList newEntryList = new EntryList(entry, null);
-        if(l == null)l = newEntryList;
+        if(l == null)return l = newEntryList;
         else{
             EntryList copyl = l;
             while(l.next != null){
                 l = l.next;
             }
             l.next = newEntryList;
-            l = copyl;
+            return l = copyl;
         }
     }
 
