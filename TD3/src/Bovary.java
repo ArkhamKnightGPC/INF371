@@ -9,8 +9,9 @@ public class Bovary {
 
             for (String w = wr.read(); w != null; w = wr.read()) {
                 hMap.add(curPrefix, w);
-                curPrefix.addShift(w);
+                curPrefix = curPrefix.addShift(w);
             }
+            hMap.add(curPrefix, Prefix.end);
         }
 
         return hMap;
@@ -45,7 +46,7 @@ public class Bovary {
     }
 
     public static void main(String[] args) {
-        int prefixLength = 3;
+        int prefixLength = 2;
         String[] files = new String[35];
         
         for(int i=1; i<=35; i++){
