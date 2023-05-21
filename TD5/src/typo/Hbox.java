@@ -5,6 +5,11 @@ import java.awt.Graphics;
 public class Hbox extends Group{
 
     @Override
+    public String toString() {
+        return String.format("Hbox" + super.toString());
+    }
+
+    @Override
     public void add(Box b){
         super.add(b);
         this.width += b.getWidth();

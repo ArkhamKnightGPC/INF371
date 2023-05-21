@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListeVide",
+            "request": "launch",
+            "mainClass": "testinho.ListeVide",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "TN",
+            "request": "launch",
+            "mainClass": "testinho.TN",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "Z",
+            "request": "launch",
+            "mainClass": "testinho.Z",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "Y",
+            "request": "launch",
+            "mainClass": "testinho.Y",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "A",
+            "request": "launch",
+            "mainClass": "A",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
