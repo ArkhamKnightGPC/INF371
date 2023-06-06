@@ -22,14 +22,7 @@ public final class CodeGen {
     // For example, lXXX where XXX is the value of labelc.
     // Two generated labels should never be equal.
     // A label must start with a lowercase letter.
-    String newLabel = "";
-    int newLabelRandomLength = (int)Math.random()%20;
-    for(int i=0; i<newLabelRandomLength; i++){
-      char c = 'a';
-      for(int j = (int)Math.random()%26; j>=0; j--)c++;
-      newLabel += "" + c;
-    }
-    return newLabel + Integer.toString(labelc);
+    return "l" + Integer.toString(labelc++);
   }
 
   public void pushLabel(String label) {
@@ -46,10 +39,14 @@ public final class CodeGen {
 
   public int getVariableOffset(String name){
     return offsets.get(name);
-  }
+  } 
   
   public void clearLocals() {
     this.offsets.clear();
+  }
+
+  public int countLocals(){
+    return offsets.size();
   }
   
   @Override

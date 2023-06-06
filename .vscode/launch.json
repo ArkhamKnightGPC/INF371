@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "teste_except",
+            "request": "launch",
+            "mainClass": "testinho.teste_except",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
+            "name": "TestParseAndType",
+            "request": "launch",
+            "mainClass": "TestParseAndType",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
             "name": "ListeVide",
             "request": "launch",
             "mainClass": "testinho.ListeVide",

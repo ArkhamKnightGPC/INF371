@@ -1,7 +1,6 @@
-int min(int a, int b) {
-  if (a < b) return a; else return b;
+int min(int a, int b){
+  return min(a,b);
 }
-
 void main() {
-  print min(3, 5);
+  print min(2, 3);
 }

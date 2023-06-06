@@ -10,6 +10,7 @@ public final class IPrint extends AbstractInstruction {
 
   @Override
   public void codegen(CodeGen cg) {
-    throw new UnsupportedOperationException(); // FIXME
+    expr.codegen(cg);
+    cg.pushInstruction(new PRT());
   }
 }

@@ -13,13 +13,14 @@ public final class IAssign extends AbstractInstruction {
 
   @Override
   public void codegen(CodeGen cg) {
-    String lstring = lvalue.orElse("");
     if(lvalue.isPresent()){//attribution
+      String lstring = lvalue.get();
       int varOffset = cg.getVariableOffset(lstring);
       this.rvalue.codegen(cg);
       cg.pushInstruction(new WFR(varOffset));
     }else{//expression
       this.rvalue.codegen(cg);
+      cg.pushInstruction(new POP());
     }
   }
 }

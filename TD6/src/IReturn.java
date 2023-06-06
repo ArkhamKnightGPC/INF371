@@ -15,6 +15,15 @@ public final class IReturn extends AbstractInstruction {
 
   @Override
   public void codegen(CodeGen cg) {
-    throw new UnsupportedOperationException(); // FIXME
+    //1. must return value using general register R
+    if(result.isPresent()){
+      AbstractExpr presentResult = result.get();
+      presentResult.codegen(cg);
+      cg.pushInstruction(new PXR());
+    }
+    //if there is no value to return (void), do nothing
+
+    //2. jump to return address, restore FP
+    cg.pushInstruction(new RET());
   }
 }
