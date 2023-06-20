@@ -7,4 +7,5 @@ This repository collects all lab exercises (**travaux-dirigés**) from the cours
 * TD3-4: *Le 36e chapitre de «Madame Bovary»*
 * TD5: *Héritage et typographie*
 * TD6: *Compilation de mini-while vers la XVM*
-* TD8: *Calculatrice à mémoire avec interface graphique*
+* TD8-9: *Calculatrice à mémoire avec interface graphique*
+* TD10: *Preuve de programmes avec Why3*
