@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "teste",
+            "request": "launch",
+            "mainClass": "testinho2.teste",
+            "projectName": "INF371_894fab72"
+        },
+        {
+            "type": "java",
             "name": "teste_except",
             "request": "launch",
             "mainClass": "testinho.teste_except",

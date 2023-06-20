@@ -1,3 +1,5 @@
+package com.td8;
+
 public class Test {
 
     public static void main(String[] args) {
@@ -29,6 +31,24 @@ public class Test {
         tokenizer.readChar('=');System.out.println("A");
         //tokenizer.readString("8+-2=");
         System.out.println(tokenizer.calc.getResult());
+
+
+        for(int i = 0; i<100; i++){
+            calculator.commandDouble(10);
+
+            if(i%5 == 0)calculator.commandOperator(Operator.PLUS);
+            else calculator.commandOperator(Operator.MULT);
+
+            calculator.commandDouble(2);
+
+            if(i%7==0)calculator.commandOperator(Operator.PLUS);
+            else calculator.commandOperator(Operator.MULT);
+            
+            System.out.println(calculator.operators.size());//ok, so stack size <=2
+        }
+        calculator.commandDouble(2);
+        
+        System.out.println(calculator.getResult());
     }
     
 }
