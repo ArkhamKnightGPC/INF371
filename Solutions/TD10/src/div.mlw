@@ -1,0 +1,19 @@
+module Loops
+
+    use int.Int
+    use ref.Ref
+    
+    let div (a:int)(b:int) = 
+        requires { a > 0 }
+        ensures { exists q:int. a = b * q + result }
+        let r = ref a in
+        let q = ref 0 in
+        assert {b >= 0};
+        while !r >= b do
+            variant { !r }
+            invariant { a = b * !q + !r}
+            r := !r - b;
+            q := !q + 1;
+        done;
+        !r
+    end
